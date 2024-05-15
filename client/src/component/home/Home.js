@@ -4,6 +4,7 @@ import axios from "axios";
 import "../home/home.css";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [searchInput, setSearchInput] = useState("");
@@ -86,6 +87,7 @@ const Home = () => {
       </div>
 
       <div className="vid-box">
+      {loading && <div className="loading">Loading...</div>}
         {selectedVideo && (
           <ReactPlayer
             className="embed-responsive-item"
@@ -93,6 +95,7 @@ const Home = () => {
               selectedVideo.url.split("=")[1] ||
               selectedVideo.url.split("embed/")[1]
             }`}
+            onReady={() => setLoading(false)}
           />
         )}
       </div>

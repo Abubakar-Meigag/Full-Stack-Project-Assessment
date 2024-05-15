@@ -64,3 +64,10 @@
     justify-content: center;
     margin-left: 220px;
 }
+
+.loading{
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    align-items: center;
+}
