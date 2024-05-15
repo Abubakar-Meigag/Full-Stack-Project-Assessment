@@ -25,6 +25,12 @@ const Home = () => {
     videoData();
   }, []);
 
+  useEffect(() => {
+    if (videos.length > 0) {
+      setSelectedVideo(videos[0]);
+    }
+  }, [videos]);
+
   const selectHandler = (e) => {
     const optionById = Number(e.target.value);
     const getSelected = videos.find((vid) => vid.id === optionById);
