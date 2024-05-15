@@ -10,10 +10,6 @@ const Nav = () => {
         <li><Link to="/videos"> Videos </Link></li>
         <li><Link to="/create"> Create </Link></li>
       </ul>
-      <ul className='right-ul'>
-        <li><Link to="/signUp">SignUp</Link></li>
-        <li><Link to="/login">Login</Link></li>
-      </ul>
     </div>
   );
 }
