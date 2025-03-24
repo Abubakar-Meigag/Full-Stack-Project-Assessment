@@ -16,6 +16,16 @@
     margin-bottom: 70px;
 }
 
-.card-title{
+.card-title {
     margin-bottom: 25px;
+}
+
+.video-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
 }

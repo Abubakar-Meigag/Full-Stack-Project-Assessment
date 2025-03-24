@@ -48,7 +48,7 @@ const Videos = () => {
                 ></iframe>
               </div>
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{video.title}</h5>
+                <h5 className="card-title video-title" title={video.title}>{video.title}</h5>
                 <div className="flex column">{<LikeComponent />}</div>
               </div>
 
