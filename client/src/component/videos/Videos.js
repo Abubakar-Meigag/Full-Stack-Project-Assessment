@@ -48,7 +48,11 @@ const Videos = () => {
                 ></iframe>
               </div>
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title video-title" title={video.title}>{video.title}</h5>
+                <div style={{ maxWidth: '250px' }}>
+                  <h5 className="card-title video-title" title={video.title}>
+                      {video.title}
+                  </h5>
+                </div>
                 <div className="flex column">{<LikeComponent />}</div>
               </div>
 
