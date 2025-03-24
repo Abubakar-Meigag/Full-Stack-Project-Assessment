@@ -45,7 +45,7 @@ const Home = () => {
   const searchButton = () => {
     const searchVideo = videos.find((video) =>
         video.title.toLowerCase().includes(searchInput.toLowerCase()) ||
-        video.id === Number(searchInput)
+        Number(video.id) === Number(searchInput)
     );
     
     if (searchVideo) {
@@ -79,7 +79,7 @@ const Home = () => {
         <select className="form-select" onChange={selectHandler}>
           <option value="">Select Your Video</option>
           {videos.map((video) => (
-            <option key={video.id} value={video.id}>
+            <option key={video.id} value={Number(video.id)}>
               {video.title}
             </option>
           ))}
