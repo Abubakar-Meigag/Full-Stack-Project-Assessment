@@ -34,7 +34,7 @@ const Home = () => {
 
   const selectHandler = (e) => {
     const optionById = Number(e.target.value);
-    const getSelected = videos.find((vid) => vid.id === optionById);
+    const getSelected = videos.find((vid) => Number(vid.id) === optionById);
     setSelectedVideo(getSelected);
   };
 
